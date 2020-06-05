@@ -6,13 +6,26 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var text="Bangladesh",t1;
+		var text="Bangladesh",t1,text2;
 		var len=text.length;
-		
+		text2 = "is a small country";
+		text1 = text.slice(0,3);//extract characters
+		text3 = text.slice(3,5);//extract characters.
 		console.log("Number of Character " + len);
-		document.write("Number of Character" + text.length +"<br><br>");
-        t1 = prompt("Enter your Name : "); 
-		document.write("your name: " + t1 );
+		document.write("Number of Character" + text.length +"<br><br>");//shows the lenth of any strings or words
+        t1 = prompt("Enter your Name : "); //takes input 
+		document.write("your name: " + t1 + "<br><br>");
+		text = text.toUpperCase();//convert lowercase to uppercase
+		document.write("uppercase :" + text   +"<br><br>");
+
+		 text = text.toLowerCase();
+		 document.write("lowercase :" + text + "<br><br>");//conveert uppercase to lowercase.
+		 document.write("concatination of strings" + text.concat(text2) + "<br><br>");//concat or adding two strings
+
+         document.write("sliced word :" + text1 + "<br>")//
+          document.write("sliced word :" + text3 + "<br>")//sliced or cut 
+
+
 
 	</script>
 
