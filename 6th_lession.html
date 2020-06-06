@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input id="1st" type="text" >
+
+<input id="2nd" type="text" >
+
+<button id="plus" type="submit" onclick="pl()" > + </button>
+
+<button id="minus" type="submit" onclick="mi()"> - </button>
+
+<button id="mul" type="submit" onclick="mul()"> * </button>
+
+<button id="div" type="submit" onclick="div()"> / </button>
+
+<script type="text/javascript">
+
+var x,y,z;
+
+
+
+
+function pl(){
+
+	    x = document.getElementById("1st").value;
+        x = parseInt(x); 
+        y = document.getElementById("2nd").value;
+        y = parseInt(y);  
+       
+
+        document.write(x+y);
+}
+
+function mi(){
+
+	    x = document.getElementById("1st").value;
+        x = parseInt(x); 
+        y = document.getElementById("2nd").value;
+        y = parseInt(y);  
+        
+
+        document.write(x-y); 
+
+
+}
+
+function mul(){
+        
+        x = document.getElementById("1st").value;
+        x = parseInt(x); 
+        y = document.getElementById("2nd").value;
+        y = parseInt(y);  
+        
+
+        document.write(x*y); 
+
+}
+
+function div(){
+
+        x = document.getElementById("1st").value;
+        x = parseInt(x); 
+        y = document.getElementById("2nd").value;
+        y = parseInt(y);  
+        
+
+        document.write(x/y); 
+
+
+}
+</script>
+</body>
+</html>
