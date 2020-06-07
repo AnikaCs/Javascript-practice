@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>letter grade</title>
+</head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body>
+<script type="text/javascript">
+	var total_subject,subject_name,subject_score,grade;
+
+	total_subject = prompt("Enter the total_subject : ");
+
+	total_subject =parseInt(total_subject);
+
+	document.write("<table><tr><th>subject</th><th>score</th><th>grade</th></tr>");
+
+	for (var i =1; i <= total_subject; i++) 
+	{
+		
+		subject_name = prompt("Name of the Subject : ");
+        
+        subject_score = prompt("Subject Score: ");
+
+        subject_score = parseInt(subject_score);
+        
+
+        if (subject_score>100) 
+        {
+        	document.write("Invalid Score")
+
+        }
+
+       else if(subject_score>=80 && subject_score<=100)
+        {  
+                    grade="A+"
+
+                  document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+        }
+        else if(subject_score>=70 && subject_score<= 79)
+        {  
+                    grade="A"
+
+                    document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+
+
+        }
+        else if(subject_score>=60 && subject_score<=69)
+        {  
+                    grade="A-"
+
+                   document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+        }
+
+        else if(subject_score>=50 && subject_score<=59)
+        {  
+                    grade="B"
+
+                    document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+
+
+        }
+
+        else if(subject_score>=40 && subject_score<=49)
+        {  
+                    grade="C"
+
+                    document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+
+
+        }
+
+        else if(subject_score>=33 && subject_score<=39)
+        {  
+                    grade="D"
+
+                   document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+
+        }
+      else{
+
+                grade="F";
+
+                document.write("<tr><td>" + subject_name + "</td><td>"+ subject_score + "</td><td>" + grade + "</td></tr>");
+
+
+      }    
+
+      
+
+
+	}
+
+	document.write("</table>" );
+    
+
+
+
+
+</script>
+</body>
+</html>
