@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>largest and smallest number</title>
+</head>
+<body>
+<script type="text/javascript">
+	var num_total,i,smallest,largest,store;//declaring array store;
+	store=[];//intializing the array
+
+	 num_total = prompt("Enter the total number: ");
+
+	   for ( i =1; i <=num_total ; i++) 
+       {
+	   	 store[i]= prompt("Enter number one by one : ");
+
+	   	 store[i] = parseInt(store[i]);
+	   	 document.write(i+":  "+store[i] + "<br>");
+	   	 if(i==1)
+	   	 {	
+	   	  smallest=store[1];
+	   	  largest =store[1];
+          }
+	   	 
+
+         if(largest<store[i])
+         {
+
+         	 
+         	 largest  = store[i];
+             
+
+         }
+         else
+         {
+             
+            
+         	 largest  =largest ;
+         	
+
+         }
+
+         if(smallest<store[i])
+         {
+
+         	 
+         	 
+             smallest = smallest; 
+
+         }
+         else
+         {
+             
+             smallest = store[i];
+         	 
+         	
+
+         }
+	   	
+
+	   }
+
+
+            document.write("<br>smallest:  "+ smallest + "<br>");
+
+            document.write("<br>largest:  "+ largest + "<br>");
+
+
+
+
+
+
+</script>
+</body>
+</html>
