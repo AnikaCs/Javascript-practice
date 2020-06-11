@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> various user defined function</title>
+</head>
+<body>
+<script type="text/javascript">
+
+square();//calling function square()
+
+square1(6);//calling function square1(), (square1() with single parameter
+
+mul(7,8);// calling function mul() ,with multiple parameters
+
+document.write("<h6>when a function return value : </h6>" + ret(10,20,30) +"<br>");	//when a function return value
+
+	
+function square(){ //function without parameter
+
+
+  var x=5,result;
+
+  
+  result=x*x;
+
+  document.write("<h6>function without parameter : </h6>"+result +"<br>");
+
+
+
+}
+
+function square1(num){ //function with single parameter
+
+    var result;
+    
+    result = num*num;
+
+    document.write("<h6> function with single parameter : </h6>" + result +"<br>");
+
+
+
+}
+
+function mul(num1,num2){ //function with two parameter or multiple parameters
+
+    var result;
+    
+    result = num1*num2;
+
+    document.write("<h6> function with two parameter or multiple parameters : </h6>" + result +"<br>");
+
+
+
+}
+
+function ret(num1,num2,num3){ //if you want to return a value of a function 
+
+     var result =num1*num2*num3;
+
+     return result;
+
+
+
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>
