@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> use of shift(),unshift(),splice(),slice(),sort(),reverse()</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var names =["anika","nusrat","jahan","ana","haq"];
+
+var names2 =["anika","nusrat","jahan","ana","haq"];
+
+var names3 =["anika","nusrat","jahan","ana","haq"];
+
+var names4 =["anika","nusrat","jahan","ana","haq"];
+
+var names5 =["anika","nusrat","jahan","ana","haq"];
+
+var names6 =["anika","nusrat","jahan","ana","haq"];
+
+var names7 =[20,60,70,10,50];
+
+var num1 = [40,45,2,6,89,90,100];
+
+var names8 =["anika","nusrat","jahan","ana","haq"];
+
+
+
+
+console.log("Before shift ... " + names);
+
+names.shift();//it will remove the 1st element of an array, so it is similar as pop but removes from the mouth.
+
+
+console.log("After shift ... " +names); 
+
+console.log("Before unshift ... " +names2); 
+
+names2.unshift("Rose");//unshift will add "Rose" at the first position of array ,so it is simillar as push()
+
+console.log("After unshift ... " +names2); 
+
+console.log("before splice : " + names3);
+
+names3.splice(2,0,"william","Bently");// 1st number  is the position of element where to add or remove element  here  2 ie names3[2], 0 is the total number of elements to remove  here no element will be removed, "william" and "bently " will be added to the  name3[2] .
+
+console.log("after splice : " + names3);
+
+names4.splice(1,1,"william","Bently");
+
+console.log("after splice : " + names4);
+
+console.log("Before Slice: " + names5);
+
+names5 = names5.slice(1);
+
+console.log("after Slice: " + names5);
+
+console.log("Before sorting: " + names6 );
+
+names6 = names6.sort();//sort will alphebetically  rearrange the names
+
+console.log("After sorting: " + names6 );
+
+console.log("before sorting numbers: " + names7);
+names7 = names7.sort()//here it will arrange number from low to high ,increasing order.
+
+console.log("After sorting numbers: " + names7);
+
+console.log("Before reversing : " + names8);
+
+names8=names8.reverse();//it will reverse the alphabet from z to a
+
+console.log("after reversing : " + names8);
+
+console.log("before reversing  numbers: " + names7);
+
+names7=names7.reverse();//it will arrange numbers in decreasing order.
+
+console.log("after reversing  numbers: " + names7);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
