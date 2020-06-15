@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Object ,Constructor  and function inside constractor</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var student1 = {   //this is how you create object so object is a variable with multiple data.
+ 
+   name: "william", //we must use : and , 
+
+   age : 4,
+
+   nationality : ["korean" , "australian"] ,
+   
+   lang: ["korean" , "English"]
+
+
+}
+
+document.write("<h1>"+student1.name +"</h1>" +"<br>"); //this is we show object property.
+
+function Student(name , age , nationality ,lang){ //creating a constructor
+
+    this.name = name;// assigning name into this.name
+    
+    this.age = age;//assigning age  into this.age
+
+    this.nationality =nationality;//same
+
+    this.lang = lang;//same
+
+
+}
+
+var student2 = new Student("bently",3,["australian" ,"Korean"],["English", "korean"]);//creating new student  object and assigning into student2. 
+
+document.write("<h1>"+student2.name +"</h1>" +"<br>");
+
+function Eng(name , dept , batch, cgpa ,skill){ //constructor with function
+
+	  this.name = name;
+
+	  this.dept = dept;
+
+	  this.batch = batch;
+
+
+	  this.cgpa = cgpa;
+
+	  this.skill = skill;
+
+
+
+	  this.display= function() {   //inside cinstructor display() shows the name,dept, batch,cgpa,skill
+
+       document.write("<h3>  Name : "+this.name + "</h3>" + "<br>");
+       document.write("<h3> Dept : " + this.dept + "</h3>" + "<br>");
+       document.write("<h3> Batch : " + this.batch + "</h3>" + "<br>");
+       document.write("<h3> Cgpa : " + this.cgpa + "</h3>" + "<br>");
+       document.write("<h3> Skill : " + this.skill + "</h3>" + "<br>");
+
+
+	  }
+
+
+}
+
+   li1 = new Eng("Rain " ," cse "," 100th "," 3.45 ",[" c "," c++ "," java "]);
+
+ document.write("<h1>  testing the li1 name "+li1.name +"</h1>" +"<br>");
+
+ li1.display() ;
+
+
+</script>	
+
+</body>
+</html>
