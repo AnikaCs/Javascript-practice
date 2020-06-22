@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOCUMENT OBJECT MODEL(DOM) ,getElementById,getElementsByTagName,getElementsByClassName,How to select Element elemts using GetElement</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Mango</h1>
+<p id="heading"> Mango </p>
+<p> More Description </p>
+<p class="additional">additional description</p>
+
+
+<script type="text/javascript">
+	
+	var mango = document.getElementById("heading");//using getElementById ,selecting html element using id
+	var more = document.getElementsByTagName("p")[1];// getElementsByTagName("p")[1] ,it is mandatory to give tag's index.
+
+	var add = document.getElementsByClassName("additional")[0];//using getElementsByClassName ,selecting html element by Class Name. it is mandatory to use index number suck as [0] 0 index class,as we know many element could be in same class ,it's not as uniqe as id. 
+
+	
+
+	   mango.innerHTML = "A mango is a juicy stone fruit produced from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit. Most of these species are found in nature as wild mangoes. The genus belongs to the cashew family Anacardiaceae." ;
+
+	   more.innerHTML = "The tree is evergreen and has a large, thick, and rough trunk;somewhat black bark, spreading branches; and a dense crown of foliage. When planted with wide spacing, the plant takes an umbrella-shaped top and may become more than 20 metre tall and 30 metre wide. The wood is grey, coarse-grained, rather light and soft in young trees, but hard in the old ones. They are found to remain crowded at about the end of a branch. The flowers, which are small, white yellowish, or violet, and fragrant, are borne in large terminal panicles. An inflorescence may contain 100-250 flower buds, not all of which may open. " ;
+
+	    add.innerHTML = "Uses The mango is one of the most delicious fruits of the world and is rightly designated as the 'king of fruits'. Different varieties however, have different tastes and flavours. The best consumption of mango is in the form of fresh fruit. The ripe fruit is peeled and the pulp is eaten as such, the fleshes either cut into pieces or made into small slices. Green fruits are often put into curries or 'dal' (pulse soup) for extra taste.A considerable quantity of both ripe and green fruits are used for making jam, jelly, squash, chutney, pickle (achar), and similar other products." ;
+
+
+       
+
+
+
+</script>
+</body>
+</html>
