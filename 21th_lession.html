@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Gussing Games </title>
+
+<style type="text/css">
+
+h2{
+
+
+	color: gray;
+}
+
+	
+h3 {
+
+	color:green;
+      
+}
+
+h5{
+
+  color: red;
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+var guess,random ,won=0 ,lost=0;
+
+
+
+
+
+for (var i = 1; i <= 10; i++) 
+{
+
+   guess = parseInt(prompt("Guess A Number From 1 to 10 : "));
+
+   rm = Math.floor(Math.random()*10);
+
+  if(guess == rm)
+  {
+
+      document.write("<h3> Wow! You Have Won  .. </h3><br>");
+      won++;
+
+   }   
+
+  else
+
+  {
+  
+   document.write("<h5>Sorry You have lost  random numer was:  " + rm + "</h5><br>");
+   lost++;
+
+  }
+
+
+ 
+   
+
+}
+document.write("<h2> You have won : " + won + "times <br></h2>");
+
+ document.write("<h2> You have lost : " + lost + "times <br></h2>");
+
+</script>	
+
+</body>
+</html>
