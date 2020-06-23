@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Important Part ,querySelector</title>
+</head>
+<body>
+<p> hello!!!</p>	
+
+<p id="heading1"> Hello World 1</p>
+
+<p class="heading2">Hello World 2</p>
+
+
+<p>default </p>
+<ul> 
+	<a href="#"> hello</a>
+  <li class=><a href="#">home</a></li>
+  <li> SignUp</li>
+  <li>LogIn</li>
+
+</ul>
+
+<p ></p>
+<ol class="test">
+	
+    <li> list1</li>
+    <li>list2</li>
+    <li>list3</li>
+
+</ol>
+
+<script type="text/javascript">
+
+var x = document.querySelector("p"),	//selecting p tag only access the 1st p tag.,ie index[0]
+    p = document.querySelector("#heading1"),
+    y = document.querySelector(".heading2") ,//selecting class heading2 using query selector.
+
+    z = document.querySelector("li a"),//accessing <a> in <li> ,this is main deferrence between get element by 
+    
+    w = document.querySelector(".test li"); //selecting li of test class.
+
+  x.innerHTML = "accessing p tag 1st index";
+  p.innerHTML = "accessing id ";
+  y.innerHTML = "it really works !";
+
+  z.innerHTML = "Parent Child relation! ";
+
+  w.innerHTML = "accessing  list of test class";
+
+
+</script>
+</body>
+</html>
