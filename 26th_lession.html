@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Image Slider</title>
+</head>
+<body>
+
+<img src="/home/anika/Desktop/index.jpeg" alt="slider" width="500" height="500">
+
+<button onclick="next()">Next</button>
+<button onclick="pre()">previous</button>
+
+<p id="test"></p>
+<script type="text/javascript">
+	
+
+
+var x = ["/home/anika/Desktop/index.jpeg","/home/anika/Desktop/wood.png","/home/anika/Desktop/submit.png"];
+
+console.log(x);
+
+var imagetag=document.querySelector("img");
+
+var count=0;
+
+     
+
+
+function next(){
+
+                    console.log(count);                
+
+                       
+           
+                                
+                     count++;
+
+                     if(count<3)//
+                         {
+
+                          
+                          imagetag.src = x[count];  
+
+                         }            
+ 
+                      else {
+
+                          count=0;
+
+                          imagetag.src = x[count];  
+
+                      }  
+
+                               
+
+                     
+              }  
+
+function pre(){
+
+
+
+
+                        console.log(count);                
+
+                       
+           
+                                
+                     count--;
+
+                     if(count<=-1)//
+                         {
+                                
+                          count=2;
+                          imagetag.src = x[count];  
+
+                         }            
+ 
+                      else {
+
+                         
+
+                          imagetag.src = x[count];  
+
+                      }  
+
+
+
+
+
+
+
+
+             }
+
+
+
+</script>
+</body>
+</html>
