@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ONCLICK METHOD and how to access image source from js file</title>
+</head>
+<body>
+<button onclick="myFunction()"> CLICK ME </button>
+<button onclick="picture()">CLICK HERE</button>
+<h1>Hello World!!!</h1>
+<img src="" >
+
+
+<script type="text/javascript">
+	
+function myFunction(){
+
+   x= document.getElementsByTagName("h1")[0];
+
+   x.style.color = "blue";
+  
+  
+
+}
+
+function picture(){
+
+ y=document.querySelector("img");
+ 
+ y.src = "/home/anika/Desktop/japan.jpg"; 
+
+
+}
+
+</script>
+</body>
+</html>
