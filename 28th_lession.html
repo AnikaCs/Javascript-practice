@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>classList add and classList remove</title>
+	<style type="text/css">
+		.para1{
+
+               color:red;
+               font-weight: 10px;
+               letter-spacing: 50px;
+               font-style: italic;
+
+		}
+       .para2{
+
+             background-color: blue;
+
+
+       }
+
+	</style>
+</head>
+<body>
+	<h1 id="heading">Hello World</h1>
+<button onclick="addstyle()">Add Style</button>
+<button onclick="removestyle()">Remove Style</button>
+
+<script type="text/javascript">
+	
+var x=document.querySelector("#heading");
+
+function addstyle(){
+
+    x.classList.add("para1") ; //The classList property returns the class name(s) of an element, as a DOMTokenList object. This property is useful to add, remove and toggle CSS classes on an element. add is used to add a class
+}
+function removestyle()
+ {
+	 x.classList.remove("para1");  //remove is used to remove a class.
+}
+
+</script>
+</body>
+</html>
