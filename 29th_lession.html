@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eventlistener</title>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+<div id="test1">click here</div>
+<br><br>
+<div id="test2">Mouse Over</div>
+<br><br>
+<div id="test3">Mouse Out</div>
+
+<script type="text/javascript">
+var x,y,z;
+x=document.getElementById("test1");
+y=document.getElementById("test2");
+z=document.querySelector("#test3");
+x.addEventListener("click",myfunction);
+
+function  myfunction(){
+
+  x.innerHTML="You have Clicked!!!";
+ 
+
+}
+y.addEventListener("mouseover",function() { //anonymous function
+
+       alert("Mouse is over now!!!!");
+
+
+});
+z.addEventListener("mouseout",function() { //anonymous function
+
+       alert("Mouse is out now!!!!");
+
+
+});
+
+</script>
+</body>
+</html>
