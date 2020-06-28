@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>addEventListener(click,mousedown,mouseup</title>
+	<style type="text/css">
+		
+	.demo1{
+
+          color:blue;
+          letter-spacing: 20px;
+
+
+	}	
+	.demo2{
+          color:green;
+          word-spacing: 10px;
+          letter-spacing: 30px;
+
+
+
+	}
+	.demo3{
+
+            font-style: italic;
+
+	}
+	</style>
+
+</head>
+<body>
+<div id="test1">Click here</div>
+<br><br>
+<div id="test2">put your Mouse Over here</div>
+<br><br>
+<div id="test3">when Mouse is  Out</div>
+<br><br>
+<div id="demo1">Hello World</div>
+<br><br>
+<div id="demo2">Hello World</div>
+<br><br>
+<div id="demo3">Hello World</div>
+<br><br>
+<script type="text/javascript">
+	var x,y,z,a,b,c;
+	x=document.querySelector("#test1");
+	y=document.querySelector("#test2");
+	z=document.querySelector("#test3");
+	a=document.querySelector("#demo1");
+	b=document.querySelector("#demo2");
+	c=document.querySelector("#demo3");
+
+	x.addEventListener("click",myFunction);
+
+	function myFunction(){
+
+      a.innerHTML="it is Clicked";
+      a.classList.add("demo1");
+        
+
+	}
+               
+    y.addEventListener("mouseover",function(){
+
+      b.innerHTML="Mouse is Over now";
+      b.classList.add("demo2","demo3");
+
+    } )
+
+   z.addEventListener("mouseout",function(){
+
+        alert("Mouse is out now");
+
+   }) 
+
+</script>
+</body>
+</html>
