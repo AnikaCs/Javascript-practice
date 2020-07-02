@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> addEventListener with loop(multiple elements) and use of (this)(important)</title>
+</head>
+<body>
+<button class="myButton">Button 1</button>
+<button class="myButton">Button 2</button>
+<button class="myButton">Button 3</button>
+<div id="demo"></div>
+<script type="text/javascript">
+	
+	//var x=document.querySelectorAll(".myButton").length,
+	   y=document.querySelector("#demo");
+    
+    for(i=0;i<3;i++)
+    {
+           
+              
+            document.querySelectorAll(".myButton")[i].addEventListener("click",function(){
+
+            track = this.innerHTML;
+
+           y.innerHTML = track + " is clicked";
+
+
+
+
+    })
+    } 
+
+
+</script>
+</body>
+</html>
