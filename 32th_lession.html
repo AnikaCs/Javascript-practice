@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How To Add Audio Play</title>
+<style type="text/css">
+	
+	.s1{
+           height:50px;
+          width: 50px;
+          background-color: green;
+
+	}
+</style>	
+</head>
+<body>
+<p id="demo"></p>	
+<button class="myButton">one</button>
+<button class="myButton">two</button>
+<button class="myButton">three</button>
+<script type="text/javascript">
+ var x,y;	
+ // x=document.querySelector(".myButton")[2].classList.add("s1");
+ 
+for (var i = 0; i < 3; i++) {
+ 	
+ //document.write(i);
+ x= document.querySelectorAll(".myButton")[i];//querySelectorAll for loop
+ x.classList.add("s1");
+ x.addEventListener("click",function(){
+
+   y=this.innerHTML;
+
+   switch(y){
+
+      case 'one':
+             var audio = new Audio('/home/anika/Downloads/bensound-sunny.mp3');
+             audio.play();
+             break;
+
+
+     case 'two':
+
+             var audio = new Audio('/home/anika/Downloads/bensound-betterdays.mp3') ;
+             audio.play();
+             break;   
+
+    case 'three':
+
+             var audio = new Audio('/home/anika/Downloads/bensound-tenderness.mp3') ;
+             audio.play();
+             break;            
+              
+
+
+
+   }
+     
+
+
+
+ });
+
+  
+
+}
+ 
+</script>
+</body>
+</html>
