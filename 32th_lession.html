@@ -6,17 +6,24 @@
 	
 	.s1{
            height:50px;
-          width: 50px;
-          background-color: green;
+          width: 70px;
+          
+          margin-left: 20px;
+
+	}
+	.anim{
+
+          box-shadow: 5px 10px green; 
+          opacity: 0.4;
 
 	}
 </style>	
 </head>
 <body>
 <p id="demo"></p>	
-<button class="myButton">one</button>
-<button class="myButton">two</button>
-<button class="myButton">three</button>
+<button class="myButton one">one</button>
+<button class="myButton two">two</button>
+<button class="myButton three">three</button>
 <script type="text/javascript">
  var x,y;	
  // x=document.querySelector(".myButton")[2].classList.add("s1");
@@ -28,8 +35,16 @@ for (var i = 0; i < 3; i++) {
  x.classList.add("s1");
  x.addEventListener("click",function(){
 
-   y=this.innerHTML;
+ y=this.innerHTML;
+ audioplay(y);
+ playanimation(y);
 
+ })
+ 
+ 
+
+}
+   function audioplay(y){
    switch(y){
 
       case 'one':
@@ -50,19 +65,30 @@ for (var i = 0; i < 3; i++) {
              audio.play();
              break;            
               
-
-
-
-   }
+ }
+}
      
 
 
 
- });
+ 
 
+  function playanimation(text){
+
+          var selectedbutton=document.querySelector("."+text);
+          selectedbutton.classList.add("anim");
+
+
+setTimeout(function(){
+
+selectedbutton.classList.remove("anim");
+
+},1000)
   
 
-}
+  }
+
+
  
 </script>
 </body>
