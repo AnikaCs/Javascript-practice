@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>adding animation</title>
+	<style type="text/css">
+	#demo{
+
+     background-color: green;
+     height:70px;
+     width:70px;
+     margin-top: 300px;
+     
+
+
+}	
+	.anim{
+
+            animation-name: animation;
+            animation-duration: 80s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+
+
+}
+@keyframes animation{
+               
+          from{width:70px;}
+          to{width:800px;}
+
+}
+
+
+
+</style>
+</head>
+<body>
+<button id="test" >CLICK HERE</button>
+<div id="demo"></div>
+<script type="text/javascript">
+var x=document.getElementById("test");
+var y=document.getElementById("demo");
+x.addEventListener("click",function(){
+
+    y.classList.add("anim");
+
+
+
+})
+
+
+
+
+
+</script>
+</body>
+</html>
