@@ -1,35 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> addEventListener with loop(multiple elements) and use of (this)(important)</title>
+	<title>How To Add Audio Play</title>
+<style type="text/css">
+	
+	.s1{
+           height:50px;
+          width: 70px;
+          
+          margin-left: 20px;
+
+	}
+	.anim{
+
+          box-shadow: 5px 10px green; 
+          opacity: 0.4;
+
+	}
+</style>	
 </head>
 <body>
-<button class="myButton">Button 1</button>
-<button class="myButton">Button 2</button>
-<button class="myButton">Button 3</button>
-<div id="demo"></div>
+<p id="demo"></p>	
+<button class="myButton a">a</button>
+<button class="myButton b">b</button>
+<button class="myButton c">c</button>
 <script type="text/javascript">
-	
-	//var x=document.querySelectorAll(".myButton").length,
-	   y=document.querySelector("#demo");
-    
-    for(i=0;i<3;i++)
-    {
-           
+ var x,y;	
+ // x=document.querySelector(".myButton")[2].classList.add("s1");
+ 
+for (var i = 0; i < 3; i++) {
+ 	
+ //document.write(i);
+ x= document.querySelectorAll(".myButton")[i];//querySelectorAll for loop
+ x.classList.add("s1");
+ x.addEventListener("click",function(){
+
+ y=this.innerHTML;
+ audioplay(y);
+ playanimation(y);
+
+ })
+ 
+ 
+
+}
+
+document.addEventListener("keypress",function(event){
+
+             var text = event.key;
+             audioplay(text);
+
+
+
+});
+
+
+   function audioplay(y){
+   switch(y){
+
+      case 'a':
+             var audio = new Audio('/home/anika/Downloads/bensound-sunny.mp3');
+             audio.play();
+             break;
+
+
+     case 'b':
+
+             var audio = new Audio('/home/anika/Downloads/bensound-betterdays.mp3') ;
+             audio.play();
+             break;   
+
+    case 'c':
+
+             var audio = new Audio('/home/anika/Downloads/bensound-tenderness.mp3') ;
+             audio.play();
+             break;            
               
-            document.querySelectorAll(".myButton")[i].addEventListener("click",function(){
-
-            track = this.innerHTML;
-
-           y.innerHTML = track + " is clicked";
+ }
+}
+     
 
 
 
+ 
 
-    })
-    } 
+  function playanimation(text){
+
+          var selectedbutton=document.querySelector("."+text);
+          selectedbutton.classList.add("anim");
 
 
+setTimeout(function(){
+
+selectedbutton.classList.remove("anim");
+
+},1000)
+  
+
+  }
+
+
+ 
 </script>
 </body>
 </html>
