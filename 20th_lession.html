@@ -6,7 +6,7 @@
 <body>
 <script type="text/javascript">
 	
-var student1 = {   //this is how you create object so object is a variable with multiple data.
+ var student1 = {   //this is how you create object so object is a variable with multiple data.
  
    name: "william", //we must use : and , 
 
@@ -21,8 +21,7 @@ var student1 = {   //this is how you create object so object is a variable with 
 
 document.write("<h1>"+student1.name +"</h1>" +"<br>"); //this is we show object property.
 
-function Student(name , age , nationality ,lang){ //creating a constructor
-
+function Student(name , age , nationality ,lang){ //creating a constructor,supply multiple data to student objectFunction when calling
     this.name = name;// assigning name into this.name
     
     this.age = age;//assigning age  into this.age
@@ -34,7 +33,7 @@ function Student(name , age , nationality ,lang){ //creating a constructor
 
 }
 
-var student2 = new Student("bently",3,["australian" ,"Korean"],["English", "korean"]);//creating new student  object and assigning into student2. 
+var student2 = new Student("bently",3,["australian" ,"Korean"],["English", "korean"]);//creating new student  object and assigning into student2. supplying these multiple data 
 
 document.write("<h1>"+student2.name +"</h1>" +"<br>");
 
