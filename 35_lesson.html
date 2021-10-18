@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Object , Constructor & class</title>
+</head>
+<body>
+  <p id="demo"></p>
+<script type="text/javascript">
+	
+var father={//father is an object (an object is consist of multiple datas)
+
+         name:"abdul haque",//name:value
+
+         age:75,
+
+         job:"govt employee",
+
+         detail: function () {//object function
+
+               name = this.name;//In a method, this refers to the owner object.Alone, this refers to the global object.In a function, this refers to the global object.In a function, in strict mode, this is undefined.In an event, this refers to the element that received the event.Methods like call(), and apply() can refer this to any object.
+
+               age = this.age;
+               job = this.job;
+         	return name + "  " + age + " "+job; 
+         }
+   
+
+}
+
+     document.write(father.name);
+     document.write(father.age);
+     document.write(father.detail());
+
+
+       const person = new Object();//new object() created a single object name person , common practice to declare objects with the const keyword.const is not mendatory but common practice.
+
+         person.firstName = "edw";//adds property without bracket
+         person.lastName = "D";//adds property without bracket
+         person.age = 50;//adds property without bracket
+         person.eyeColor = "blue";//adds property without bracket
+
+           //const x = person;  The object x is not a copy of person. It is person. Both x and person are the same object. Any changes to x will also change person, because x and person are the same object. 
+
+
+
+       //another way to create an object.
+
+
+       const human=Object.create(person);//where another object is used as prototype,here person is prototype or argument.
+
+         document.write(human.firstName +"<br>");//before assiging value in firstname it will show the value of person.firstName.
+
+        human.firstName = "nusrat";//it will gain the property of person name:value,here we are overwriting firstname as "nusrat"
+
+        document.write(human.firstName +"<br>");
+
+     
+        function Person(first, last, age, eye) //constructor is a "blueprint" for creating many objects of the same "type".function Person() is an object constructor function.
+        {
+        this.firstName = first;//first thing ,first,last,age,eye these are the arguments.so thats why this.firstName =first.
+        this.lastName = last;
+       this.age = age;
+       this.eyeColor = eye;
+       this.name=function(){
+             
+           return this.firstName + " "+this.lastName  
+
+
+       };
+     }
+       
+      const myFather = new Person("John","doe",50, "blue");//Objects of the same type are created by calling the constructor function with the new keyword:
+       const myMother = new Person("Sally", "edw",35, "green");//Objects of the same type are created by calling the constructor function with the new keyword:
+
+        document.write();
+  //JavaScript has built-in constructors for native objects:
+  new String()    // A new String object
+  new Number()    // A new Number object
+  new Boolean()   // A new Boolean object
+  new Object()    // A new Object object
+  new Array()     // A new Array object
+  new RegExp()    // A new RegExp object
+  new Function()  // A new Function object
+  new Date()      // A new Date object 
+//Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+
+
+/*Use string literals "" instead of new String().
+
+Use number literals 50 instead of new Number().
+
+Use boolean literals true / false instead of new Boolean().
+
+Use object literals {} instead of new Object().
+
+Use array literals [] instead of new Array().
+
+Use pattern literals /()/ instead of new RegExp().
+
+Use function expressions () {} instead of new Function().
+
+
+there is no reason to create complex objects. Primitive values are much faster:i.e  var num=50 is more perfect than new Number(50)*/
+
+const x4 = {};           // new Object object,Use object literals {} instead of new Object().
+const x5 = [];           // new Array object,Use array literals [] instead of new Array().
+const x6 = /()/          // new RegExp object,Use pattern literals /()/ instead of new RegExp().
+const x7 = function(){}; // new function ,Use function expressions () {} instead of new Function().
+
+class Car { //class keywords creates a class named Car
+  constructor(name, year) {//The class has two initial properties: "name" and "year".
+    this.name = name;//A JavaScript class is not an object.It is a template for JavaScript objects.
+
+    this.year = year;
+  }
+}
+
+const myCar = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML =
+myCar.name + " " + myCar.year;
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Canvas </title>
+</head>
+<canvas id="myCanvas"  style="border:1px solid gray;display: block;margin: auto;"></canvas><!-- display:block;margin:auto -->
+<body>
+	<script type="text/javascript">
+		
+    var c = document.getElementById("myCanvas");
+    c.height=600;
+    c.width =700;
+
+    var ctx = c.getContext("2d");
+ 
+    // Create gradient
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    //createLinearGradient(x,y,x1,y1) - creates a linear gradient ,creates a gradiant Colour
+    //createRadialGradient(x,y,r,x1,y1,r1) - creates a radial/circular gradient
+
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+   // Fill with gradient
+   ctx.fillStyle = grd;
+   ctx.fillRect(10, 10, 150, 80); 
+
+	</script>
+
+</body>
+</html>
