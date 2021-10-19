@@ -19,12 +19,22 @@
     //createLinearGradient(x,y,x1,y1) - creates a linear gradient ,creates a gradiant Colour
     //createRadialGradient(x,y,r,x1,y1,r1) - creates a radial/circular gradient
 
-    grd.addColorStop(0, "red");
+    grd.addColorStop(0, "red");//The addColorStop() method specifies the color stops, and its position along the gradient. Gradient positions can be anywhere between 0 to 1.
     grd.addColorStop(1, "white");
 
    // Fill with gradient
    ctx.fillStyle = grd;
    ctx.fillRect(10, 10, 150, 80); 
+
+var grd2 = ctx.createRadialGradient(20,50,20,90,60,30);
+grd2.addColorStop(0,"red");
+grd2.addColorStop(0.5,"blue");
+grd2.addColorStop(1,"black");
+
+// Fill with gradient
+ctx.fillStyle = grd2;
+ctx.fillRect(100,100,150,80);
+   
 
 	</script>
 
