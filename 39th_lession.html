@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>javascript Date Objects</title>
+</head>
+<body>
+<p id="demo">Hello!</p>	
+<script type="text/javascript">
+	
+const d=new Date();//if no paremeter is passed in new Date() object it shows current date of our particular location and in time standard.
+
+const e=new Date(2018, 11, 24, 10, 33, 30, 0);//6 numbers specify year, month, day, hour, minute, second. that means= new Date(year,month,day,hour,minute,second). if 5 parameters are passed than it will be (new Date(year,month,day,hour,minuet)). 4 will be (new Date(year ,month,day,hour)) this goes on..
+
+const w=new Date(2021);//but one parameter treated as miliseconds.
+
+const isoD=new Date("2015-03-25");//syntax (YYYY-MM-DD) is
+const D2=new Date("2015/03/25");
+
+const D3 = new Date("Mar 25 2015");//long dates.Long dates are most often written with a "MMM DD YYYY" syntax like this: 
+
+const mysec=Date.parse("March 21, 2012");//Date.parse() returns the number of milliseconds between the date and January 1, 1970:
+
+const dd = new Date();
+
+
+document.getElementById("demo").innerHTML="d= "+d+"<br><br>";//normal new Date() object.
+
+document.getElementById("demo").innerHTML+="e= "+e+"<br><br>";
+
+document.getElementById("demo").innerHTML+="when one parameter is passed on new Date() like new Date(number) w = "+w+"<br><br>";
+
+document.getElementById("demo").innerHTML+="date is converted to string = "+d.toString()+"<br><br>";//it is automatically converted to a string,with the to string.
+
+document.getElementById("demo").innerHTML+="date is in UTC standard = "+d.toUTCString()+"<br><br>";//The toUTCString() method converts a date to a UTC string (a date display standard).string.
+
+document.getElementById("demo").innerHTML+="date is in iso standard = "+d.toISOString()+"<br><br>";//The toISOString() method converts a Date object to a string, using the ISO standard format:
+
+
+//ISO - International Organization for Standardization
+
+//The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+
+
+document.getElementById("demo").innerHTML+="isoD=new Date(\"2015-03-25\") = "+isoD+"<br><br>";// the ISO standard format:
+//before displaying quation mark we need give this \before quation i.e \"  
+
+
+
+document.getElementById("demo").innerHTML+=" (short date) new Date(\"03/25/2015\")  = "+D2+"<br><br>";//short dates are written with an "MM/DD/YYYY" syntax like this:
+
+document.getElementById("demo").innerHTML+=" (Long date) new Date(\"Mar 25 2015\")  = "+D3+"<br><br>";//Month and day can be in any order:
+
+document.getElementById("demo").innerHTML+=" Date.parse(\"March 21, 2012\") = "+mysec+"<br><br>";//Month and day can be in any order:
+
+document.getElementById("demo").innerHTML+=" The getTime() method(d.getTime()) returns the number of milliseconds since January 1, 1970: "+dd+"<br><br>";//Month and day can be in any order:
+
+document.getElementById("demo").innerHTML+="The getFullYear() method(d.getFullYear()) returns the year of a date as a four digit number:"+d.getFullYear()+"<br><br>";
+
+document.getElementById("demo").innerHTML+="The getMonth() method(d.getMonth()) returns the month of a date as a number (0-11)::"+d.getMonth()+"<br><br>";
+
+
+document.getElementById("demo").innerHTML+="Returns the day of the date:"+d.getDate()+"<br><br>";
+document.getElementById("demo").innerHTML+="Returns the hours of the date:"+d.getHours()+"<br><br>";
+document.getElementById("demo").innerHTML+="Returns the minutes of the date:"+d.getMinutes()+"<br><br>";
+document.getElementById("demo").innerHTML+="Returns the seconds of the date:"+d.getSeconds()+"<br><br>";
+
+document.getElementById("demo").innerHTML+="Returns the Milli seconds of the date:"+d.getMilliseconds()+"<br><br>";
+
+
+
+
+
+
+</script>
+</body>
+</html>
