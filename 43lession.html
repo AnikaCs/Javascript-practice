@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>typeof</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script type="text/javascript">
+	const fruits=["banana","orange","apple"];
+	const myDate=new Date();
+	document.getElementById("demo").innerHTML=isArray(fruits);
+//	In JavaScript there are 5 different data types that can contain values: string,number,boolean,object,function
+
+//There are 6 types of objects:  Object,Date,Array,String, Number,Boolean
+
+//And 2 data types that cannot contain values:null,undefined
+document.getElementById("demo").innerHTML+="It's a string \"john\" "+typeof "john"+"<br>";
+document.getElementById("demo").innerHTML+="It's a string\"123\""+typeof "123"+"<br>";
+document.getElementById("demo").innerHTML+="it's a number"+typeof 123+"<br>";
+document.getElementById("demo").innerHTML+="it's a number"+typeof 1.2+"<br>";
+document.getElementById("demo").innerHTML+="it's an object"+typeof [1,2,3]+"<br>";
+document.getElementById("demo").innerHTML+="it's an object"+typeof {name:'john',age:34}+"<br>";
+document.getElementById("demo").innerHTML+="it's an object"+typeof new Date()+"<br>";
+document.getElementById("demo").innerHTML+="it's a function"+typeof function () {}+"<br>";
+document.getElementById("demo").innerHTML+="mycar is not defined "+typeof mycar+"<br>";
+document.getElementById("demo").innerHTML+="it's also an object"+typeof null+"<br>";
+document.getElementById("demo").innerHTML+=typeof 6.7+"<br>";
+
+//The constructor property returns the constructor function for all JavaScript variables.
+
+document.getElementById("demo").innerHTML+="\"John\".constructor  :   "+"John".constructor+"<br>";
+document.getElementById("demo").innerHTML+="(3.14).constructor :" +(3.14).constructor+"<br>";
+document.getElementById("demo").innerHTML+="false.constructor: "+false.constructor+"<br>";
+document.getElementById("demo").innerHTML+="{name:\"John\",age:34} :"+{name:"John",age:34}.constructor+"<br>";
+document.getElementById("demo").innerHTML+="new Date.constructor(): "+new Date().constructor+"<br>";
+document.getElementById("demo").innerHTML+="function(){}.constructor: "+function(){}.constructor +"<br>";
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+//The indexOf() method returns the position of the first occurrence of a specified value in a string.The indexOf() method returns -1 if the value is not found.The indexOf() method is case sensitive.
+document.getElementById("demo").innerHTML+=isArray(fruits)+"<br>";
+
+function isDate(myDate){
+
+ return myDate.constructor.toString().indexOf("Date")>-1
+
+
+}
+
+document.getElementById("demo").innerHTML+=isDate(myDate)+"<br>";
+</script>
+</body>
+</html>
