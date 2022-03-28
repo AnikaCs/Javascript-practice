@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Sets</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+	//a javascript set is a collection of unique values,Set is actually an object
+	//The Set object lets you store unique values of any type, 
+
+  const letters1=new Set(["a","b","c"]);//pass an array to the new Set() constructor
+  const letters2=new Set();
+  const letters3=new Set(["a","b","c"]);
+  let text="";
+  
+  document.getElementById("demo").innerHTML+="display the set variable: "+letters1+"<br>";
+  document.getElementById("demo").innerHTML+="check the size of the new Set ,letters1: "+letters1.size+"<br>";
+//add values to the set
+
+letters2.add("a");
+letters2.add("b");
+letters2.add("c");
+document.getElementById("demo").innerHTML+="check The size of the new set,letters2: "+letters2.size+"<br>";
+letters3.forEach(function(value) {
+
+ text+=value;
+})
+document.getElementById("demo").innerHTML+= text;
+
+</script>
+</body>
+</html>
