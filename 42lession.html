@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Maps</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script type="text/javascript">
+	          //create a map
+	          /*Essential Map Methods
+               Method	Description
+               new Map() =	Creates a new Map
+               set() =	Sets the value for a key in a Map
+               get() =	Gets the value for a key in a Map
+               delete() =	Removes a Map element specified by the key
+               has() =	Returns true if a key exists in a Map
+               forEach() =	Calls a function for each key/value pair in a Map
+               entries() =	Returns an iterator with the [key, value] pairs in a Map
+               Property	Description
+               size	Returns the number of elements in a Map
+               */
+
+
+	const fruits = new Map([ //You can create a Map by passing an Array to the new Map() constructor:		
+	//A Map holds key-value pairs where the keys can be any datatype.
+	//A Map remembers the original insertion order of the keys.
+
+
+      ["apples",500],//["key",value]
+      ["banana",300],//["key",value]
+      ["oranges",200],//["key",value]
+      ["tomato",400]//["key",value]
+
+		])
+	fruits.set("potato",600);//we can use set method to add elements.
+	document.getElementById("demo").innerHTML=fruits.get("banana")+"<br>";//get method is used to get the value for a specified key i,e here if the key is banana then the value for banana is 300.
+    document.getElementById("demo").innerHTML+=fruits.get("potato")+"<br>";
+    //also set method is used to change existing map values.
+
+    fruits.set("apples",100);//here we are changing values of apples(key) from 500 to 100.
+    fruits.delete("tomato");//this delete method is used to delete a[key,value] in map
+    //we are deleting tomato key with its value from the map.
+    document.getElementById("demo").innerHTML+=fruits.has("tomato")+"<br>"; //has method is used to check if the tomato exsist or not. if exist it will show true if not it will show false.
+     document.getElementById("demo").innerHTML+=fruits.entries("oranges",200)+"<br>"; 
+     document.getElementById("demo").innerHTML+=fruits.forEach()+"<br>";
+     document.getElementById("demo").innerHTML+=fruits.size+"<br>";
+
+
+</script>
+</body>
+</html>
