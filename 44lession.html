@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Type conversion</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script type="text/javascript">
+	
+/*JavaScript variables can be converted to a new variable and another data type:
+
+    By the use of a JavaScript function
+    Automatically by JavaScript itself */
+
+   
+
+   // Converting Strings to Numbers
+       
+                    /*The global method Number() can convert strings to numbers.            
+
+                      Strings containing numbers (like "3.14") convert to numbers (like 3.14).                       
+
+                      Empty strings convert to 0.                       
+
+                      Anything else converts to NaN (Not a Number).
+                      */
+
+ document.getElementById("demo").innerHTML=Number("3.14")+"<br>";    // returns 3.14
+document.getElementById("demo").innerHTML+=Number(" ")+"<br>";       // returns 0
+document.getElementById("demo").innerHTML+=Number("")+"<br>";        // returns 0
+document.getElementById("demo").innerHTML+=Number("99 88")+"<br>";   // returns NaN 
+document.getElementById("demo").innerHTML+=Number(23)+"<br>";
+document.getElementById("demo").innerHTML+=Number("32.54")+"<br>";
+document.getElementById("demo").innerHTML+=Number(NaN)+"<br>";
+document.getElementById("demo").innerHTML+=typeof(Number(NaN))+"<br>";
+
+//Parses a string and returns a floating point number
+
+document.getElementById("demo").innerHTML+=parseFloat("10")+"<br>";
+document.getElementById("demo").innerHTML+=parseFloat("10.9")+"<br>";
+document.getElementById("demo").innerHTML+=parseFloat("10 11 12")+"<br>";
+document.getElementById("demo").innerHTML+=parseFloat("9.0")+"<br>";
+document.getElementById("demo").innerHTML+=parseInt("34.8")+"<br>";
+document.getElementById("demo").innerHTML+=parseInt("34xyz")+"<br>";
+document.getElementById("demo").innerHTML+=parseInt("34x1")+"<br>";
+document.getElementById("demo").innerHTML+=parseInt("11 132 13")+"<br>";
+document.getElementById("demo").innerHTML+=
+
+
+
+
+
+
+
+
+    //Converting Numbers to Strings
+    //Converting Dates to Numbers
+    //Converting Numbers to Dates
+    //Converting Booleans to Numbers
+    //Converting Numbers to Booleans
+
+
+
+
+</script>
+</body>
+</html>
